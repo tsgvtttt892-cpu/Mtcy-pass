@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #326BC8;
+    --color-primary-hover: #2459AE;
+    --color-navy: #193761;
+    --color-text-secondary: #60799B;
+    --color-soft-blue: #DCEBFF;
+    --color-bg: #F3F8FF;
+    --color-card: #FFFFFF;
+    --color-input-bg: #F6FAFF;
+    --color-border: #D7E5F7;
+
+    --radius-card: 22px;
+    --radius-input: 12px;
+    --radius-button: 13px;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html,
+  body {
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-navy);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.font-brand {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+@keyframes sealBreathing {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.78;
+  }
+}
+
+@keyframes sealWrongShake {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    transform: translate3d(-6px, 0, 0);
+  }
+  40% {
+    transform: translate3d(6px, 0, 0);
+  }
+  65% {
+    transform: translate3d(-3px, 0, 0);
+  }
+  85% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
+
+@keyframes sealRingFlash {
+  0% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.14);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+}
+
+@keyframes sealBreakWave {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.65);
+    opacity: 0;
+  }
+}
+
+@keyframes ambientDrift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.22;
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+    opacity: 0.48;
+  }
+}
+
+.animate-seal-breathing {
+  animation: sealBreathing 3.6s ease-in-out infinite;
+}
+
+.animate-seal-wrong-shake {
+  animation: sealWrongShake 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.animate-seal-ring-flash {
+  animation: sealRingFlash 0.32s ease-out both;
+}
+
+.animate-seal-break-wave {
+  animation: sealBreakWave 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-ambient-drift {
+  animation: ambientDrift 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

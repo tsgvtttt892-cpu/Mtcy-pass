@@ -1,0 +1,6 @@
+{
+  "name": "THIÊN ẤN — Bảo Mật Nội Dung & Giải Mã",
+  "description": "Cất giữ một bí mật, chờ người hữu duyên giải mã. Tạo câu hỏi mật khẩu bảo vệ nội dung hoặc đường dẫn bí mật.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
